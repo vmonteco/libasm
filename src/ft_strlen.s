@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/21 14:19:05 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/21 14:20:49 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/21 16:17:01 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -17,7 +17,7 @@ _ft_strlen_loop:
 	cmp [rdi], 0
 	jz _ft_strlen_end
 	inc rdi
-	inc ras
+	inc rax
 	jmp _ft_strlen_loop
 
 _ft_strlen_end:
