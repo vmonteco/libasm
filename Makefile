@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 17:23:30 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/21 18:31:45 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,7 +16,7 @@ CC =								gcc
 ASFLAGS =							
 ASDEBUGFLAGS =						-g
 LIBASM_FLAG =						$(subst .a,,$(subst lib,-l,$(NAME)))
-CFLAGS =							-Wall -Werror -Wextra $(LIBASM_FLAG)
+CFLAGS =							-v -W -Wall -Werror -Wextra $(LIBASM_FLAG)
 
 SRC =								src/mandatory/ft_strlen.s
 
