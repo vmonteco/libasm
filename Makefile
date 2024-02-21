@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 14:24:59 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/21 16:08:35 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,7 +22,26 @@ SRC =								src/ft_strlen.s
 BONUS_SRC =
 
 OBJ  =								$(subst .s,.o,$(SRC))
-BONUS_OBJ =							$(subst .s,.o,$(BONUS_SRC))
+OBJ_BONUS =							$(subst .s,.o,$(BONUS_SRC))
+
+# Test related :
+TEST_SRC =							tests/mandatory/test_main.c \
+									tests/mandatory/test_ft_strlen.c
+TEST_H =							tests/mandatory/includes/test.h
+TEST_BONUS_SRC =					tests/bonus/test_bonus_main.c
+TEST_BONUS_H =						tests/bonus/includes/test_bonus.h
+
+# CLEAN_FILES :
+LIBASM_CLEAN_FILES =				$(OBJ)
+LIBASM_BONUS_CLEAN_FILES =			$(OBJ_BONUS)
+TEST_CLEAN_FILES =					$(subst .c,.o,$(TEST_SRC)) \
+									$(TEST_EXECUTABLE)
+TEST_BONUS_CLEAN_FILES =			$(subst .c,.o,$(TEST_BONUS_SRC)) \
+									$(TEST_BONUS_EXECUTABLE)
+CLEAN_FILES =						$(LIBASM_CLEAN_FILES) \
+									$(LIBASM_BONUS_CLEAN_FILES) \
+									$(TEST_CLEAN_FILES) \
+									$(TESTS)
 
 all: $(NAME)
 
@@ -33,11 +52,24 @@ $(NAME): $(OBJ)
 %.o: %.s
 	$(AS) $(ASFLAGS) -f elf64 -o $@ $^
 
+test: $(TEST_EXECUTABLE)
+	./$<
+
+$(TEST_EXECUTABLE): $(TEST_SRC) $(TEST_H) $(NAME)
+	$(CC) $(CFLAGS) -o $@ $^
+
+test_bonus: $(TEST_BONUS_EXECUTABLE)
+	./$<
+
+$(TEST_BONUS_EXECUTABLE): $(TEST_BONUS_SRC) $(TEST_BONUS_H) $(NAME)
+	$(CC) $(CFLAGS) -o $@ $^
+
 clean:
+	rm $(CLEAN_FILES)
 
 fclean: clean
 	rm $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test test_bonus
