@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 14:11:48 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/21 14:24:59 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,7 +17,7 @@ ASFLAGS =
 ASDEBUGFLAGS =						-g
 CFLAGS =							-Wall -Werror -Wextra
 
-SRC =
+SRC =								src/ft_strlen.s
 
 BONUS_SRC =
 
@@ -40,4 +40,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:
+.PHONY: all clean fclean re
