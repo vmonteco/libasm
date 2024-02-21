@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 16:51:10 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/21 17:23:30 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -15,9 +15,10 @@ AS =								nasm
 CC =								gcc
 ASFLAGS =							
 ASDEBUGFLAGS =						-g
-CFLAGS =							-Wall -Werror -Wextra
+LIBASM_FLAG =						$(subst .a,,$(subst lib,-l,$(NAME)))
+CFLAGS =							-Wall -Werror -Wextra $(LIBASM_FLAG)
 
-SRC =								src/ft_strlen.s
+SRC =								src/mandatory/ft_strlen.s
 
 BONUS_SRC =
 
@@ -52,14 +53,14 @@ $(NAME): $(OBJ)
 	ar rc $@ $(OBJ)
 	ranlib $@
 
-%.o: %.s
+src/%.o: src/%.s
 	$(AS) $(ASFLAGS) -f elf64 -o $@ $^
 
 test: $(TEST_EXECUTABLE)
 	./$<
 
 $(TEST_EXECUTABLE): $(TEST_SRC) $(TEST_H) $(NAME)
-	$(CC) $(CFLAGS) -o $@ -I tests/mandatory/includes -I src/mandatory/includes $^
+	$(CC) $(CFLAGS) -o $@ -I tests/mandatory/includes -I src/mandatory/includes -L . $(TEST_SRC) 
 
 test_bonus: $(TEST_BONUS_EXECUTABLE)
 	./$<

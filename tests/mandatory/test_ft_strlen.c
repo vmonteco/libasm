@@ -6,17 +6,18 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:47:30 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/21 17:16:19 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 #include "libasm.h"
-# DEFINE FT_STRLEN_TESTCASE(CASE) printf("## Test case - %r :\nReturn of strlen(%r) : %d\nReturn of ft_strlen(%r)", CASE, strlen(CASE), ft_strlen(CASE));
+#define FT_STRLEN_TESTCASE(CASE) printf("## Test case - \"%s\" :\nReturn of strlen(%s) : %lu.\nReturn of ft_strlen(%s) : %lu.\n", CASE, CASE, strlen(CASE), CASE, ft_strlen(CASE));
 
 void test_ft_strlen(void)
 {
 	printf("# ft_strlen test :\n");
-	TESTCASE(strlen, ft_strlen, "");
-	TESTCASE("FOO");
+	FT_STRLEN_TESTCASE("");
+	FT_STRLEN_TESTCASE("FOO");
 }

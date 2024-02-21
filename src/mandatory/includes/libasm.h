@@ -6,13 +6,13 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:52:32 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:53:14 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/21 17:12:05 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBASM_H
 # define LIBASM_H
 
-int		ft_atoi(const_char *nptr);
+size_t	ft_strlen(const char *nptr);
 
 #endif
