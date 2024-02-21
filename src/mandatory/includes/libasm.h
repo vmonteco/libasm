@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_main.c                                        :+:      :+:    :+:   */
+/*   libasm.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 15:22:32 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:39:20 by vmonteco         ###   ########.fr       */
+/*   Created: 2024/02/21 16:52:32 by vmonteco          #+#    #+#             */
+/*   Updated: 2024/02/21 16:53:14 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "test.h"
+#ifndef LIBASM_H
+# define LIBASM_H
 
+int		ft_atoi(const_char *nptr);
 
-int main(void)
-{
-	test_ft_strlen();
-	return EXIT_SUCCESS;
-}
+#endif

@@ -6,13 +6,13 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:10:20 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:10:45 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:47:13 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_H
 # define TEST_H
 
-
+void	test_ft_strlen(void);
 
 #endif

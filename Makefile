@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 16:08:35 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/21 16:51:10 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -30,6 +30,9 @@ TEST_SRC =							tests/mandatory/test_main.c \
 TEST_H =							tests/mandatory/includes/test.h
 TEST_BONUS_SRC =					tests/bonus/test_bonus_main.c
 TEST_BONUS_H =						tests/bonus/includes/test_bonus.h
+
+TEST_EXECUTABLE =					test_libasm
+TEST_BONUS_EXECUTABLE =				test_bonus_libasm
 
 # CLEAN_FILES :
 LIBASM_CLEAN_FILES =				$(OBJ)
@@ -56,7 +59,7 @@ test: $(TEST_EXECUTABLE)
 	./$<
 
 $(TEST_EXECUTABLE): $(TEST_SRC) $(TEST_H) $(NAME)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tests/mandatory/includes -I src/mandatory/includes $^
 
 test_bonus: $(TEST_BONUS_EXECUTABLE)
 	./$<
