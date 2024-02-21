@@ -2,3 +2,4 @@
 \#*\#
 libasm.a
 *.o
+test_libasm
