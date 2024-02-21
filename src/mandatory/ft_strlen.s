@@ -6,10 +6,12 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/21 14:19:05 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/21 16:24:05 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/21 22:52:17 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
+	global ft_strlen
+	
 ft_strlen:
 	mov rax, 0
 	mov rcx, 0

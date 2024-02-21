@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
+/*   test_main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 17:16:19 by vmonteco         ###   ########.fr       */
+/*   Created: 2024/02/21 15:22:32 by vmonteco          #+#    #+#             */
+/*   Updated: 2024/02/21 22:52:54 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include "libasm.h"
-#define FT_STRLEN_TESTCASE(CASE) printf("## Test case - \"%s\" :\nReturn of strlen(%s) : %lu.\nReturn of ft_strlen(%s) : %lu.\n", CASE, CASE, strlen(CASE), CASE, ft_strlen(CASE));
+#include <stdlib.h>
+#include "tests.h"
 
-void test_ft_strlen(void)
+
+int main(void)
 {
-	printf("# ft_strlen test :\n");
-	FT_STRLEN_TESTCASE("");
-	FT_STRLEN_TESTCASE("FOO");
+	test_ft_strlen();
+	return EXIT_SUCCESS;
 }

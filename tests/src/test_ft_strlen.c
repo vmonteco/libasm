@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_main.c                                        :+:      :+:    :+:   */
+/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 15:22:32 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:39:20 by vmonteco         ###   ########.fr       */
+/*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
+/*   Updated: 2024/02/21 22:53:23 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "test.h"
+#include <stdio.h>
+#include <string.h>
+#include "libasm.h"
+#define FT_STRLEN_TESTCASE(CASE) printf("## Test case - \"%s\" :\nReturn of strlen(%s) : %lu.\nReturn of ft_strlen(%s) : %lu.\n", CASE, CASE, strlen(CASE), CASE, ft_strlen(CASE));
 
+size_t ft_strlen(const char* ptrn);
 
-int main(void)
+void test_ft_strlen(void)
 {
-	test_ft_strlen();
-	return EXIT_SUCCESS;
+	printf("# ft_strlen test :\n");
+	FT_STRLEN_TESTCASE("");
+	FT_STRLEN_TESTCASE("FOO");
 }
