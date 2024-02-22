@@ -6,13 +6,11 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 02:14:05 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 06:57:40 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include "libasm.h"
+#include "tests.h"
 
 
 void ft_strlen_testcase(char *str)
