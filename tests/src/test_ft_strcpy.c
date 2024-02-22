@@ -6,15 +6,13 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 00:35:57 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 02:22:56 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:01:57 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include "tests.h"
-#include "libasm.h"
 
 void ft_strcpy_testcase(char *str){
 	char *dst;

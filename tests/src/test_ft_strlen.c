@@ -6,10 +6,11 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 06:57:40 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 09:56:54 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "tests.h"
 
 

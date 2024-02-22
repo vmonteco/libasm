@@ -6,12 +6,11 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 02:57:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 03:04:58 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:02:07 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libasm.h"
+#include "tests.h"
 
 void ft_strcmp_testcase(char *str1, char *str2)
 {

@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/22 01:11:34 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/22 10:00:26 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -39,6 +39,10 @@ TESTS_SRC =							$(addprefix $(TESTS_SRC_DIR), \
 										test_main.c \
 										test_ft_strlen.c \
 										test_ft_strcpy.c \
+										test_ft_strcmp.c \
+										test_ft_write.c \
+										test_ft_read.c \
+										test_ft_strdup.c \
 									)
 
 TESTS_H =							$(addprefix $(TESTS_INCLUDES_DIR),tests.h)
