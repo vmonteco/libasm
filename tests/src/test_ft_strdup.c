@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:49:27 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 16:36:43 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:51:47 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_strdup_testcase(const char *s)
 }
 
 
-void	test_ft_write(void)
+void	test_ft_strdup(void)
 {
 	printf(" ft_strdup test :\n");
 	ft_strdup_testcase("");
