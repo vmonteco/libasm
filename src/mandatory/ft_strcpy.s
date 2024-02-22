@@ -1,29 +1,24 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_strlen.s                                        :+:      :+:    :+:    ;
+;    ft_strcpy.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2024/02/21 14:19:05 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/22 02:13:10 by vmonteco         ###   ########.fr        ;
+;    Created: 2024/02/22 01:14:01 by vmonteco          #+#    #+#              ;
+;    Updated: 2024/02/22 02:00:47 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-	global ft_strlen
-	
-ft_strlen:
-	mov rax, 0
-	mov rcx, 0
-	
-.loop:
-	cmp [rdi], cl
-	jz .end
-	inc rdi
-	inc rax
-	jmp .loop
+	global ft_strcpy
 
-.end:
+ft_strcpy:
+	; rdi will contain dst
+	; rsi will contain src
+	; At the end, rax will contain the return value
+
+.ft_strcpy_loop:
+	
+	
+.ft_strcpy_end:
 	ret
-
-	

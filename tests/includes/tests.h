@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:10:20 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/21 16:47:13 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 01:12:57 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 # define TEST_H
 
 void	test_ft_strlen(void);
+void	test_ft_strcpy(void);
 
 #endif

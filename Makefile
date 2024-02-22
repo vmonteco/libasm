@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/21 21:37:02 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/22 01:11:34 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,7 +20,8 @@ DEBUG_FLAGS =						-v -W
 CFLAGS =							-Wall -Werror -Wextra
 # CFLAGS +=							$(DEBUG_FLAGS)
 
-SRC =								src/mandatory/ft_strlen.s
+SRC =								src/mandatory/ft_strlen.s \
+									src/mandatory/ft_strcpy.s
 
 BONUS_SRC =
 
@@ -37,6 +38,7 @@ TESTS_SRC_DIR =						$(addprefix $(TESTS_DIR),src/)
 TESTS_SRC =							$(addprefix $(TESTS_SRC_DIR), \
 										test_main.c \
 										test_ft_strlen.c \
+										test_ft_strcpy.c \
 									)
 
 TESTS_H =							$(addprefix $(TESTS_INCLUDES_DIR),tests.h)
