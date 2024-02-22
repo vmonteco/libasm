@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 06:17:33 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 09:50:45 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 14:56:19 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	test_ft_write(void)
 		read(fd, buf, file_size);
 		printf("Content written to file :\n", buf);
 		close(fd);
+		remove("/tmp/libftasm.test");
 	}
 	else
 	{
