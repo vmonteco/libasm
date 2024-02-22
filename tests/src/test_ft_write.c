@@ -6,10 +6,13 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 06:17:33 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 14:56:19 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:35:27 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "tests.h"
 
 ssize_t	ft_write_testcase(int fd, const void *ptr, size_t count)
@@ -17,13 +20,13 @@ ssize_t	ft_write_testcase(int fd, const void *ptr, size_t count)
 	ssize_t result = 0;
 	ssize_t last_result;
 	
-	printf("## Test case - %d, \"%s\", %lu :\n", fd, ptr, count);
+	printf("## Test case - %d, \"%s\", %lu :\n", fd, (char *)ptr, count);
 	last_result = write(fd, ptr, count);
 	result += last_result;
-	printf("write return value : %llu.", last_result);
+	printf("write return value : %lu.", last_result);
 	last_result = write(fd, ptr, count);
 	result += last_result;
-	printf("ft_write return value : %llu.", last_result);
+	printf("ft_write return value : %lu.", last_result);
 	return result;
 }
 
@@ -39,14 +42,14 @@ void	test_ft_write(void)
 	ft_write_testcase(1, "", 3);
 	ft_write_testcase(1, "", 3);
 	ft_write_testcase(2, "foo", 3);
-	fd = open("/tmp/libftasm.test", O_CREAT | O_READ);
+	fd = open("/tmp/libftasm.test", O_CREAT);
 	file_size = ft_write_testcase(fd, "foo", 3);
 	close(fd);
 	if ((buf = malloc(file_size + 1)))
 	{
-		fd = open("/tmp/libftasm.test", O_READ);
+		fd = open("/tmp/libftasm.test", 0);
 		read(fd, buf, file_size);
-		printf("Content written to file :\n", buf);
+		printf("Content written to file :\n%s\n", buf);
 		close(fd);
 		remove("/tmp/libftasm.test");
 	}

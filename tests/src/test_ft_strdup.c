@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:49:27 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 16:07:04 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:36:43 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_strdup_testcase(const char *s)
 {
 	char	*copy;
 
-	printf("## Test case - \"%s\", %lx (address) :\n", s, (unsigned long) s);
+	printf("## Test case - \"%s\", %p (address) :\n", s, (void *) s);
 	copy = strdup(s);
-	printf("Result with standard strdup : \"%s\" at %lx.\n", copy, (unsigned long) copy);
+	printf("Result with standard strdup : \"%s\" at %p.\n", copy, (void *) copy);
 	free(copy);
 	copy = strdup(s);
-	printf("Result with ft_strdup : \"%s\" at %lx.\n", copy, (unsigned long) copy);
+	printf("Result with ft_strdup : \"%s\" at %p.\n", copy, (void *) copy);
 	free(copy);
 }
 
