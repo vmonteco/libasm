@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 02:57:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/23 04:45:59 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/23 04:47:38 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void ft_strcmp_testcase(char *str1, char *str2)
 {
 	printf("## Test case - \"%s\", \"%s\" :\n", str1, str2);
 	printf(
-		"Return of strcmp(\"%s\", \"%s\") : %d", str1, str2,
+		"Return of strcmp(\"%s\", \"%s\") : %d\n", str1, str2,
 		strcmp(str1, str2)
 	);
 	printf(
-		"Return of ft_strcmp(\"%s\", \"%s\") : %d", str1, str2,
+		"Return of ft_strcmp(\"%s\", \"%s\") : %d.\n", str1, str2,
 		ft_strcmp(str1, str2)
 	);
 }
