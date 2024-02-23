@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:02:50 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 16:30:51 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/23 04:46:20 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void ft_read_testcase(int fd, size_t count)
 		chars_read = read(fd, buf, count);
 		printf("Characters read : %s.\nNumber of characters read : %ld.\n", (char *)buf, chars_read);
 		printf("Test with ft_read, first line :\n");
-		chars_read = read(fd, buf, count);
+		chars_read = ft_read(fd, buf, count);
 		printf("Characters read : %s.\nNumber of characters read : %ld.\n", (char *)buf, chars_read);
 		printf("Test with ft_read, second line :\n");
-		chars_read = read(fd, buf, count);
+		chars_read = ft_read(fd, buf, count);
 		printf("Characters read : %s.\nNumber of characters read : %ld.\n", (char *)buf, chars_read);
 	}
 	else

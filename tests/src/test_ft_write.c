@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 06:17:33 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 16:35:27 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/23 04:44:51 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ssize_t	ft_write_testcase(int fd, const void *ptr, size_t count)
 	last_result = write(fd, ptr, count);
 	result += last_result;
 	printf("write return value : %lu.", last_result);
-	last_result = write(fd, ptr, count);
+	last_result = ft_write(fd, ptr, count);
 	result += last_result;
 	printf("ft_write return value : %lu.", last_result);
 	return result;

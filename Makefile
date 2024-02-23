@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/23 01:54:40 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/23 04:38:05 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -21,7 +21,8 @@ CFLAGS =							-Wall -Werror -Wextra
 CFLAGS +=							$(DEBUG_FLAGS)
 
 SRC =								src/mandatory/ft_strlen.s \
-									src/mandatory/ft_strcpy.s
+									src/mandatory/ft_strcpy.s \
+									src/mandatory/ft_strcmp.s
 
 BONUS_SRC =
 
