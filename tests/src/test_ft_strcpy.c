@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 00:35:57 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/22 10:01:57 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/22 23:52:21 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ void ft_strcpy_testcase(char *str){
 	printf("## Test case - \"%s\" :\n", str);
 	if ((dst = malloc(strlen(str) + 1)))
 	{
-		printf("Raw print, characters printed : %d\n", printf("%s\n", str));
-		dst = strcpy(dst, str);
-		printf("Standard strcpy, characters printed : %d\nstrcmp with original : %d.\n", printf("%s\n", dst), strcmp(dst, str));
+		/* bzero(dst, strlen(str) + 1); */
+		/* printf("⬑ Raw print, characters printed (\"$$\\n\" included) : %d\n", printf("$%s$\n", str)); */
+		/* dst = strcpy(dst, str); */
+		/* printf("⬑ Standard strcpy, characters printed (\"$$\\n\" included) : %d\nstrcmp with original : %d.\n", printf("$%s$\n", dst), strcmp(dst, str)); */
 		bzero(dst, strlen(str) + 1);
 		dst = ft_strcpy(dst, str);
-		printf("ft_strcpy, characters printed : %d\nstrcmp with original : %d.\n", printf("%s\n", dst), strcmp(dst, str));
+		printf("⬑ ft_strcpy, characters printed (\"$$\\n\" included) : %d\nstrcmp with original : %d.\n", printf("$%s$\n", dst), strcmp(dst, str));
 		free(dst);
 	}
 	else
