@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/23 04:51:00 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/23 09:31:02 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,6 +88,9 @@ test_bonus: $(TEST_BONUS_EXECUTABLE)
 $(TEST_BONUS_EXECUTABLE): $(TEST_BONUS_SRC) $(TEST_BONUS_H) $(NAME)
 	$(CC) $(CFLAGS) -o $@ $^
 
+debug: $(TEST_EXECUTABLE)
+	gdb $(TEST_EXECUTABLE)
+
 clean:
 	rm $(CLEAN_FILES)
 
@@ -96,4 +99,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re test test_bonus
+.PHONY: all clean fclean re test test_bonus debug
