@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:14:14 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/25 12:46:20 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/25 23:34:46 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -28,14 +28,17 @@
 ft_strcmp:
 	;; rdi ; s1
 	;; rsi : s2
-	mov rax, 0
 	
 .loop:
+	mov rax, 0
+	mov ecx, 0
+	mov edx, 0
 	mov cl, [rdi]
 	mov dl, [rsi]
-	mov al, cl
-	sub al, dl
-	js .sub_sign
+	
+	mov eax, ecx
+	sub eax, edx
+	;; jc .old_sub_sign
 	jnz .end
 	cmp cl, 0
 	jz .end
@@ -45,8 +48,10 @@ ft_strcmp:
 	inc rsi
 	jmp .loop
 
-.sub_sign:
-	;; por rax, 80 00 00 00h
+;; .old_sub_sign:
+;; 	movsx ax, al
+;; 	movsx eax, ax
+;; 	;; por rax, 80 00 00 00h
 
 .end:
 	ret
