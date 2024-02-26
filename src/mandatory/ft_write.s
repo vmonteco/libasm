@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:48:45 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/26 22:04:36 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/26 22:24:30 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -18,6 +18,7 @@
 	;; buf in rsi
 	;; count in rdx
 	;; https://github.com/bpowers/musl/blob/master/src/internal/syscall_ret.c
+	;; https://www.nasm.us/xdoc/2.11.08/html/nasmdoc9.html#section-9.2.4
 	
 ft_write:
 	mov		rax, 0x01
