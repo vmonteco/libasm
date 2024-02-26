@@ -6,7 +6,7 @@
 #    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 14:00:52 by vmonteco          #+#    #+#              #
-#    Updated: 2024/02/26 13:11:38 by vmonteco         ###   ########.fr        #
+#    Updated: 2024/02/26 20:14:45 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,7 +17,7 @@ ASFLAGS =
 ASDEBUGFLAGS =						-g
 LIBASM_FLAG =						$(subst .a,,$(subst lib,-l,$(NAME)))
 DEBUG_FLAGS =						-g
-CFLAGS =							-Wall -Werror -Wextra
+CFLAGS =							-Wall -Werror -Wextra -fPIE
 CFLAGS +=							$(DEBUG_FLAGS)
 
 SRC =								src/mandatory/ft_strlen.s \

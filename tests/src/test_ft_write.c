@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 06:17:33 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/26 17:41:00 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/26 20:16:19 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,21 @@ void	ft_write_error_EBADF_testcase(){
 	int		res;
 	
 	printf("#### Error case - EBADF :\n");
-	/* printf("#### write behaviour :\n"); */
-	/* res = write(42, "FOO\n", 4); */
-	/* printf("Return value : %d.\n", res); */
-	/* if (res < 0) */
-	/* { */
-	/* 	printf("(errno: %d) Error case : %s.\n", errno, strerror(errno)); */
-	/* } */
-	/* else */
-	/* { */
-	/* 	printf("No error detected.\n"); */
-	/* } */
+	printf("#### write behaviour :\n");
+	res = write(42, "FOO\n", 4);
+	printf("Return value : %d.\n", res);
+	if (res == -1)
+	{
+		printf("(errno: %d) Error case : %s.\n", errno, strerror(errno));
+	}
+	else
+	{
+		printf("No error detected.\n");
+	}
 	printf("#### ft_write behaviour :\n");
 	res = ft_write(42, "FOO\n", 4);
 	printf("Return value : %d.\n", res);
-	if (res < 0)
+	if (res == -1)
 	{
 		printf("(errno: %d) Error case : %s.\n", errno, strerror(errno));
 	}
