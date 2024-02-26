@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:48:45 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/26 20:15:24 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/26 22:04:36 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -27,11 +27,10 @@ ft_write:
 	jmp .end
 
 .error_handling:
-	mov		ebx, eax
-	neg		ebx
+	neg		eax
 	
 	call	__errno_location wrt ..plt
-	mov		[rax], ebx
+	mov		[rax], eax
 	mov		eax, -1
 	
 .end:
