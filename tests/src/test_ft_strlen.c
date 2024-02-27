@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/27 04:53:11 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/27 05:01:34 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ extern int		tests_success;
 
 int		ft_strlen_tests_ran = 0;
 int		ft_strlen_tests_success = 0;
+
 
 void ft_strlen_testcase(char *str)
 {
