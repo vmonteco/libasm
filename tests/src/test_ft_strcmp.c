@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 02:57:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/25 14:03:06 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/27 04:23:47 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ char	*ft_str_to_unsigned_char_vals(char *str){
 		res[i*6+5] = ' ';
 		i++;
 	}
-	return res;
-		
+	return res;		
 }
 
 void ft_strcmp_testcase(char *str1, char *str2)
