@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/21 14:19:05 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/27 05:31:06 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/27 22:41:17 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -20,6 +20,7 @@
 
 	;; Here we declare ft_strlen as a global symbol to make it accessible for
 	;; the whole codebase.
+section .text
 	global		ft_strlen
 
 ft_strlen:
