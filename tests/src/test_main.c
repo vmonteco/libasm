@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 15:22:32 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/28 03:05:14 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/28 05:28:18 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(void)
 {
 	test_ft_strlen();
 	test_ft_strcpy();
-	/* test_ft_strcmp(); */
+	test_ft_strcmp();
 	/* test_ft_write(); */
 	/* test_ft_read(); */
 	/* test_ft_strdup(); */
