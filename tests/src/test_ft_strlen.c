@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:47:26 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/27 05:01:34 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/28 03:20:54 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,18 @@ void ft_strlen_testcase(char *str)
 	ft_strlen_res = ft_strlen(str);
 	printf("Return of strlen(\"%s\") : %lu.\n", str, strlen_res);
 	printf("Return of ft_strlen(\"%s\") : %lu.\n", str, ft_strlen_res);
-	print_single_result(strlen_res == ft_strlen_res, &ft_strlen_tests_ran, &ft_strlen_tests_success);
+	print_single_result(
+		strlen_res == ft_strlen_res,
+		&ft_strlen_tests_ran,
+		&ft_strlen_tests_success
+	);
 }
 
 
 void test_ft_strlen(void)
 {
 	char	*very_long_string;
-	int		size = 9994096;
+	int		size = 9999999;
 	
 	printf("# ft_strlen test :\n");
 	ft_strlen_testcase("");
