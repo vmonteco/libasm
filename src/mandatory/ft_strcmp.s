@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:14:14 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/25 23:34:46 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/28 15:58:38 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -22,12 +22,14 @@
 	;; - 19:52 < Jester01> note that subtracting unsigned can give a (seemingly) negative result which isn't really negative ... e.g. 0xff - 0x01 = 0xfe
 	;; - you should use the carry flag for unsigned ... you can easily shift that into the MSB
 	;; 
-	
+
+	section .text
 	global ft_strcmp
 	
 ft_strcmp:
-	;; rdi ; s1
-	;; rsi : s2
+	;; According to the calling convention :
+	;; - The s1 parameter will be passed through rdi.
+	;; - The s2 parameter will be passed through rsi.
 	
 .loop:
 	mov rax, 0
