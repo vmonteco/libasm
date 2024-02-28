@@ -6,7 +6,7 @@
 /*   By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 00:35:57 by vmonteco          #+#    #+#             */
-/*   Updated: 2024/02/28 04:48:57 by vmonteco         ###   ########.fr       */
+/*   Updated: 2024/02/28 04:50:35 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,6 @@ void test_ft_strcpy(void)
 	int		size = 9999999;
 
 	printf("# ft_strcpy test :\n");
-	
-	
 	ft_strcpy_testcase("");
 	ft_strcpy_testcase("foo");
 	printf("## Case with very long (unprintable) string (size : %d) :\n", size);
