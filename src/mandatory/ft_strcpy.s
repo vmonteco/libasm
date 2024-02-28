@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/22 01:14:01 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/28 05:10:31 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/28 05:13:05 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -17,7 +17,6 @@ ft_strcpy:
 	push		rdi				;; Str to copy will have a pointer to it passed
 								;; through rdi. We must return it but will
 								;; alter it so we preserve it with a push.
-	;; mov			rax, 0		;; Sounds actually useless.
 	
 .loop:
 	cmp			byte [rsi], 0	;; We check for the end of the str to copy.
