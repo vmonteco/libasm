@@ -6,12 +6,13 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:48:45 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/26 22:24:30 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/02/28 15:52:15 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-	extern __errno_location
-	global ft_write
+
+	extern		__errno_location
+	global		ft_write
 
 
 	;; fd in rdi
@@ -21,18 +22,18 @@
 	;; https://www.nasm.us/xdoc/2.11.08/html/nasmdoc9.html#section-9.2.4
 	
 ft_write:
-	mov		rax, 0x01
+	mov			rax, 0x01
 	syscall
-	cmp rax, 0
-	js	.error_handling
-	jmp .end
+	cmp			rax, 0
+	js			.error_handling
+	jmp			.end
 
 .error_handling:
-	neg		eax
+	neg			eax
 	
-	call	__errno_location wrt ..plt
-	mov		[rax], eax
-	mov		eax, -1
-	
+	call		__errno_location wrt ..plt
+	mov			[rax], eax
+	mov			eax, -1
+
 .end:
 	ret
