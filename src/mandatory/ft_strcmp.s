@@ -6,25 +6,12 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:14:14 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/02/28 15:58:38 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/03/01 04:06:47 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-	;; Possible instructions to use :
-	;; - NEG
-	;; - OR
-	;; - POR
-	;; - movsx
-	;; CF. also :
-	;; - Carry Flag (CF)
-	;; - Sub Flag (SF)
-	;; - How are negative numbers represented in ASM
-	;; - 19:52 < Jester01> note that subtracting unsigned can give a (seemingly) negative result which isn't really negative ... e.g. 0xff - 0x01 = 0xfe
-	;; - you should use the carry flag for unsigned ... you can easily shift that into the MSB
-	;; 
-
-	section .text
-	global ft_strcmp
+	section					.text
+	global					ft_strcmp
 	
 ft_strcmp:
 	;; According to the calling convention :
@@ -32,28 +19,25 @@ ft_strcmp:
 	;; - The s2 parameter will be passed through rsi.
 	
 .loop:
-	mov rax, 0
-	mov ecx, 0
-	mov edx, 0
-	mov cl, [rdi]
-	mov dl, [rsi]
+	mov						rax, 0
+	mov						ecx, 0
+	mov						edx, 0
+	mov						cl, [rdi]	;; Put s1 in cl byte per byte.
+	mov						dl, [rsi]	;; Same for s2.
 	
-	mov eax, ecx
-	sub eax, edx
-	;; jc .old_sub_sign
-	jnz .end
-	cmp cl, 0
-	jz .end
-	cmp dl, 0
-	jz .end
-	inc rdi
-	inc rsi
-	jmp .loop
-
-;; .old_sub_sign:
-;; 	movsx ax, al
-;; 	movsx eax, ax
-;; 	;; por rax, 80 00 00 00h
+	mov						eax, ecx	;; We need to preserve current chars
+										;; for both s1 and s2 so we can check
+										;; it's not nul.
+	sub						eax, edx	;; Actual substraction.
+	jnz						.end		;; Sub might have set ZF.
+										;; We end in case of difference.
+	cmp						cl, 0		;; We check if any of the str ends.
+	jz						.end
+	cmp						dl, 0
+	jz						.end
+	inc						rdi			;; We increment each str.
+	inc						rsi
+	jmp						.loop		;; We loop back on .loop label
 
 .end:
 	ret
