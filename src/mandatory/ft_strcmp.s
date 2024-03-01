@@ -6,7 +6,7 @@
 ;    By: vmonteco </var/spool/mail/vmonteco>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2024/02/23 04:14:14 by vmonteco          #+#    #+#              ;
-;    Updated: 2024/03/01 04:06:47 by vmonteco         ###   ########.fr        ;
+;    Updated: 2024/03/01 04:09:44 by vmonteco         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -17,11 +17,11 @@ ft_strcmp:
 	;; According to the calling convention :
 	;; - The s1 parameter will be passed through rdi.
 	;; - The s2 parameter will be passed through rsi.
-	
-.loop:
-	mov						rax, 0
+	mov						rax, 0		;; We set those regs to zero.
 	mov						ecx, 0
 	mov						edx, 0
+	
+.loop:
 	mov						cl, [rdi]	;; Put s1 in cl byte per byte.
 	mov						dl, [rsi]	;; Same for s2.
 	
